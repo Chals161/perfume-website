@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Beau';
+    src: url("Beau_Rivage/BeauRivage-Regular.ttf");
+}
+@font-face {
+    font-family: 'Playfair';
+    src: url("Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+/* Resetting default margin and padding */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar {
+    margin: 20px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Playfair';
+    margin-left: 30px;
+    padding: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+}
+
+/* Header text styling */
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensures it's above the image */
+}
+
+.header-text h1 {
+    font-family: 'Beau';
+    font-size: 250px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Full-screen image styling */
+.full-screen-image {
+    width: 100vw;
+    height: 125vh;
+    object-fit: cover;
+}
+
+.subheader-text h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Playfair";
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    opacity: 0.7;
+}
+
+/* Perfume grid layout */
+.perfume-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: black;
+    margin-bottom: 50px;
+}
+
+/* Individual perfume item styling */
+.perfume-item {
+    width: 30%;
+    margin: 10px;
+    position: relative;
+}
+
+/* Perfume image styling */
+.perfume-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    /* -webkit-box-reflect: below; */
+}
+
+/* Perfume info styling */
+.perfume-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect on perfume item */
+.perfume-item:hover .perfume-image {
+    opacity: 0.7;
+}
+
+.perfume-item:hover .perfume-info {
+    opacity: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: transparent;
+    /* border: 2px solid rgba(0, 0, 0, 0.8); */
+    border-radius: 6px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+
+}

@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Beau';
+    src: url("Beau_Rivage/BeauRivage-Regular.ttf");
+}
+@font-face {
+    font-family: 'Playfair';
+    src: url("Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+  background-color: black;
+}
+
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair';
+    font-weight: 700;
+}
+
+.social-media {
+    margin: 0 auto 0 50px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+.social-media a:hover {
+    background: white;
+}
+
+.social-media a i {
+    font-size: 20px;
+    color: white;
+    transition: .5s;
+}
+
+.social-media a:hover i {
+    color: #444;
+
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Playfair';
+    margin-left: 30px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+}
+/* Style for the headers */
+.header-text-love{
+    position: relative;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(about-4.png);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.header-text-calm{
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(C-background-2.png);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.header-text-energy{
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(E-background-1.png);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.header-text-radiance {
+    position: relative;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(R-background-2.png);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.header-text-love h1,
+.header-text-calm h1,
+.header-text-energy h1,
+.header-text-radiance h1 {
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Playfair';
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* When header is in view, show with animation */
+.header-text-love.show,
+.header-text-calm.show,
+.header-text-energy.show,
+.header-text-radiance.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Perfume section styling */
+.perfume-section {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 3px; /* Adjust the gap between columns as needed */
+    background-color: rgba(241, 77, 77, 0.2);
+}
+
+.content p {
+    flex: 1;
+    /* Additional styling for paragraphs if necessary */
+}
+
+
+p {
+    color: white;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "Playfair";
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+}
+
+/* Perfume grid layout */
+.perfume-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Individual perfume item styling */
+.perfume-item {
+    width: 30%;
+    margin: 10px;
+    position: relative;
+}
+
+/* Perfume image styling */
+.perfume-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Perfume info styling */
+.perfume-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect on perfume item */
+.perfume-item:hover .perfume-image {
+    opacity: 0.7;
+}
+
+.perfume-item:hover .perfume-info {
+    opacity: 1;
+}
+
+.ingredients-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ingredients {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ingredients img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.ingredients p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+    color: rgb(165, 57, 57);
+}
+
+.quote {
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 30px;
+}
+
+.team-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    margin-bottom: 20px;
+}
+
+.member-info {
+    text-align: center;
+    background-color: rgba(241, 77, 77, 0.2);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+}
+
+.member-info img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-info p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
